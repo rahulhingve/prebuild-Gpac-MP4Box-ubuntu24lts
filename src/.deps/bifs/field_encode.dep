@@ -1,0 +1,27 @@
+bifs/field_encode.o: bifs/field_encode.c \
+ /root/gpac_public/include/gpac/internal/bifs_dev.h \
+ /root/gpac_public/include/gpac/nodes_mpeg4.h \
+ /root/gpac_public/include/gpac/scenegraph_vrml.h \
+ /root/gpac_public/include/gpac/scenegraph.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/maths.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/bifs.h \
+ /root/gpac_public/include/gpac/mpeg4_odf.h \
+ /root/gpac_public/include/gpac/sync_layer.h \
+ /root/gpac_public/include/gpac/thread.h \
+ /root/gpac_public/include/gpac/internal/scenegraph_dev.h \
+ /root/gpac_public/include/gpac/scenegraph_svg.h \
+ /root/gpac_public/include/gpac/svg_types.h \
+ /root/gpac_public/include/gpac/path2d.h \
+ /root/gpac_public/include/gpac/events_constants.h \
+ /root/gpac_public/include/gpac/download.h \
+ /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/cache.h \
+ /root/gpac_public/include/gpac/network.h \
+ /root/gpac_public/include/gpac/internal/bifs_tables.h bifs/quant.h \
+ bifs/script.h

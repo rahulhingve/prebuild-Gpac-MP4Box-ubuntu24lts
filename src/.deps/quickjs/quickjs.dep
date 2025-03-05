@@ -1,0 +1,3 @@
+quickjs/quickjs.o: quickjs/quickjs.c quickjs/cutils.h quickjs/list.h \
+ quickjs/quickjs.h quickjs/libregexp.h quickjs/libunicode.h \
+ quickjs/quickjs-atom.h quickjs/quickjs-opcode.h

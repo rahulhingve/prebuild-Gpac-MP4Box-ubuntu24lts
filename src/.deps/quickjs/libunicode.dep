@@ -1,0 +1,2 @@
+quickjs/libunicode.o: quickjs/libunicode.c quickjs/cutils.h \
+ quickjs/libunicode.h quickjs/libunicode-table.h

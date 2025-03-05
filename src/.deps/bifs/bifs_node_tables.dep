@@ -1,0 +1,11 @@
+bifs/bifs_node_tables.o: bifs/bifs_node_tables.c \
+ /root/gpac_public/include/gpac/internal/bifs_tables.h \
+ /root/gpac_public/include/gpac/nodes_mpeg4.h \
+ /root/gpac_public/include/gpac/scenegraph_vrml.h \
+ /root/gpac_public/include/gpac/scenegraph.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/maths.h

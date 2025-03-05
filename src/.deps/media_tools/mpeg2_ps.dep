@@ -1,0 +1,10 @@
+media_tools/mpeg2_ps.o: media_tools/mpeg2_ps.c media_tools/mpeg2_ps.h \
+ /root/gpac_public/include/gpac/avparse.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/mpeg4_odf.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/sync_layer.h

@@ -1,0 +1,27 @@
+filters/dec_nvdec.o: filters/dec_nvdec.c \
+ /root/gpac_public/include/gpac/thread.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/internal/media_dev.h \
+ /root/gpac_public/include/gpac/media_tools.h \
+ /root/gpac_public/include/gpac/isomedia.h \
+ /root/gpac_public/include/gpac/mpeg4_odf.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/sync_layer.h \
+ /root/gpac_public/include/gpac/avparse.h \
+ /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/filters.h \
+ /root/gpac_public/include/gpac/events.h \
+ /root/gpac_public/include/gpac/maths.h \
+ /root/gpac_public/include/gpac/events_constants.h \
+ /root/gpac_public/include/gpac/constants.h \
+ /root/gpac_public/include/gpac/download.h \
+ /root/gpac_public/include/gpac/cache.h \
+ /root/gpac_public/include/gpac/main.h \
+ /root/gpac_public/include/gpac/utf.h \
+ /root/gpac_public/include/gpac/ietf.h \
+ /root/gpac_public/include/gpac/network.h \
+ /root/gpac_public/include/gpac/webvtt.h

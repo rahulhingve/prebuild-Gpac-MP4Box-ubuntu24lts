@@ -1,0 +1,28 @@
+scene_manager/swf_parse.o: scene_manager/swf_parse.c \
+ /root/gpac_public/include/gpac/nodes_mpeg4.h \
+ /root/gpac_public/include/gpac/scenegraph_vrml.h \
+ /root/gpac_public/include/gpac/scenegraph.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/maths.h \
+ /root/gpac_public/include/gpac/internal/swf_dev.h \
+ /root/gpac_public/include/gpac/scene_manager.h \
+ /root/gpac_public/include/gpac/isomedia.h \
+ /root/gpac_public/include/gpac/mpeg4_odf.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/sync_layer.h \
+ /root/gpac_public/include/gpac/color.h \
+ /root/gpac_public/include/gpac/constants.h \
+ /root/gpac_public/include/gpac/media_tools.h \
+ /root/gpac_public/include/gpac/avparse.h \
+ /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/filters.h \
+ /root/gpac_public/include/gpac/events.h \
+ /root/gpac_public/include/gpac/events_constants.h \
+ /root/gpac_public/include/gpac/download.h \
+ /root/gpac_public/include/gpac/cache.h \
+ /root/gpac_public/include/gpac/main.h \
+ /root/gpac_public/include/gpac/utf.h

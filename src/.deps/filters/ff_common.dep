@@ -1,0 +1,2 @@
+filters/ff_common.o: filters/ff_common.c \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h

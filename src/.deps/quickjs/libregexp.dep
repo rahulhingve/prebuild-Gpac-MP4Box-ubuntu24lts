@@ -1,0 +1,2 @@
+quickjs/libregexp.o: quickjs/libregexp.c quickjs/cutils.h \
+ quickjs/libregexp.h quickjs/libunicode.h quickjs/libregexp-opcode.h

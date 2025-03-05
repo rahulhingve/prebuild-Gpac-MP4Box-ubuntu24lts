@@ -1,0 +1,7 @@
+quickjs/quickjs-libc.o: quickjs/quickjs-libc.c \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/thread.h quickjs/cutils.h quickjs/list.h \
+ quickjs/quickjs-libc.h quickjs/quickjs.h

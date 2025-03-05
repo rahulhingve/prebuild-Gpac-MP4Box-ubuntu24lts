@@ -1,0 +1,9 @@
+utils/os_config_init.o: utils/os_config_init.c \
+ /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/network.h \
+ /root/gpac_public/include/gpac/main.h \
+ /root/gpac_public/include/gpac/utf.h

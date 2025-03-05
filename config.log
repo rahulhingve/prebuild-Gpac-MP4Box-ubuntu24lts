@@ -1,0 +1,644 @@
+Logs for GPAC configure --static-bin
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 14.2.0-4ubuntu2' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-14-zdkDXv/gcc-14-14.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-14-zdkDXv/gcc-14-14.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 14.2.0 (Ubuntu 14.2.0-4ubuntu2) 
+*** CC/CXX Test Passed (args -fno-strict-aliasing) : 
+
+
+Source was: 
+#include <stdio.h>
+int main( void ) { return 0; }
+
+
+*** CC/CXX Test Passed (args -lz -Wno-pointer-sign) : 
+
+
+Source was: 
+#include <stdio.h>
+int main( void ) { return 0; }
+
+
+*** CC/CXX Test Passed (args -msse2 -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <emmintrin.h>
+int main( void ) { return 0; }
+
+
+*** CC/CXX Test Passed (args ) : 
+
+
+Source was: 
+#include <dlfcn.h>
+int main( void ) { dlopen("foo", 0); return 0; }
+
+
+*** CC/CXX Test Passed (args ) : 
+
+/tmp/gpac-conf--21467-.c: In function ‘main’:
+/tmp/gpac-conf--21467-.c:2:32: warning: variable ‘st’ set but not used [-Wunused-but-set-variable]
+    2 | int main( void ) { struct stat st; st.st_mtim.tv_nsec = 0; return 0; }
+      |                                ^~
+
+Source was: 
+#include <sys/stat.h>
+int main( void ) { struct stat st; st.st_mtim.tv_nsec = 0; return 0; }
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <pthread.h>
+#include <stdatomic.h>
+int main( void ) { return 0; }
+
+
+*** CC/CXX Test Passed (args ) : 
+
+
+Source was: 
+#include <stdint.h>
+int main(void) {
+    int i4 = 4;
+    int64_t i8 = 8;
+    __sync_add_and_fetch(&i4, 12);
+    __sync_add_and_fetch(&i8, 12);
+}
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <string.h>
+int main( void ) {
+    char dest[1];
+    strlcpy(dest, "1", 1);
+    return 0;
+}
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs) : 
+
+/tmp/gpac-conf--21467-.c: In function ‘main’:
+/tmp/gpac-conf--21467-.c:2:39: warning: unused variable ‘serv_add’ [-Wunused-variable]
+    2 | int main( void ) { struct sockaddr_un serv_add; return 0; }
+      |                                       ^~~~~~~~
+
+Source was: 
+#include <sys/un.h>
+int main( void ) { struct sockaddr_un serv_add; return 0; }
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <ifaddrs.h>
+#include <net/if.h>
+int main( void ) {  struct ifaddrs *ifap; getifaddrs(&ifap); return 0; }
+
+
+*** CC/CXX Test Passed (args -lz -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <string.h>
+#include <stdio.h>
+#include <zlib.h>
+int main( void ) { if (strcmp(zlibVersion(), ZLIB_VERSION)) { puts("zlib version differs !!!"); return 1; } return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lOpenSVCDec) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: OpenSVCDecoder/SVCDecoder_ietr_api.h: No such file or directory
+    1 | #include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+int main( void ) { void *codec; SVCDecoder_init(&codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lOpenSVCDec) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: OpenSVCDecoder/SVCDecoder_ietr_api.h: No such file or directory
+    1 | #include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+int main( void ) { void *codec; SVCDecoder_init(&codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lOpenSVCDec) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: OpenSVCDecoder/SVCDecoder_ietr_api.h: No such file or directory
+    1 | #include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <OpenSVCDecoder/SVCDecoder_ietr_api.h>
+int main( void ) { void *codec; SVCDecoder_init(&codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lfreetype) : 
+
+/tmp/gpac-conf--21467-.cpp:1:10: fatal error: ft2build.h: No such file or directory
+    1 | #include <ft2build.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#include FT_GLYPH_H
+#include FT_OUTLINE_H
+int main( void ) { FT_Library library; FT_Init_FreeType(&library); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/freetype -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lfreetype) : 
+
+/tmp/gpac-conf--21467-.cpp:1:10: fatal error: ft2build.h: No such file or directory
+    1 | #include <ft2build.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#include FT_GLYPH_H
+#include FT_OUTLINE_H
+int main( void ) { FT_Library library; FT_Init_FreeType(&library); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/freetype -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lfreetype) : 
+
+/tmp/gpac-conf--21467-.cpp:1:10: fatal error: ft2build.h: No such file or directory
+    1 | #include <ft2build.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#include FT_GLYPH_H
+#include FT_OUTLINE_H
+int main( void ) { FT_Library library; FT_Init_FreeType(&library); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lpng -lz) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: png.h: No such file or directory
+    1 | #include <png.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <png.h>
+#include <stddef.h>
+int main( void ) {  png_struct *png_ptr = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/png -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lpng -lz) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: png.h: No such file or directory
+    1 | #include <png.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <png.h>
+#include <stddef.h>
+int main( void ) {  png_struct *png_ptr = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/png -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lpng -lz) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: png.h: No such file or directory
+    1 | #include <png.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <png.h>
+#include <stddef.h>
+int main( void ) {  png_struct *png_ptr = png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lmad) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: mad.h: No such file or directory
+    1 | #include <mad.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <mad.h>
+int main( void ) {  struct mad_stream stream; mad_stream_finish(&stream); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lmad) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: mad.h: No such file or directory
+    1 | #include <mad.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <mad.h>
+int main( void ) {  struct mad_stream stream; mad_stream_finish(&stream); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lmad) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: mad.h: No such file or directory
+    1 | #include <mad.h>
+      |          ^~~~~~~
+compilation terminated.
+
+Source was: 
+#include <mad.h>
+int main( void ) {  struct mad_stream stream; mad_stream_finish(&stream); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -la52 -lm) : 
+
+/tmp/gpac-conf--21467-.c:4:10: fatal error: a52dec/mm_accel.h: No such file or directory
+    4 | #include <a52dec/mm_accel.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <inttypes.h>
+#define uint32_t unsigned int
+#define uint8_t unsigned char
+#include <a52dec/mm_accel.h>
+#include <a52dec/a52.h>
+int main( void ) { a52_state_t *codec; a52_free(codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -la52 -lm) : 
+
+/tmp/gpac-conf--21467-.c:4:10: fatal error: a52dec/mm_accel.h: No such file or directory
+    4 | #include <a52dec/mm_accel.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <inttypes.h>
+#define uint32_t unsigned int
+#define uint8_t unsigned char
+#include <a52dec/mm_accel.h>
+#include <a52dec/a52.h>
+int main( void ) { a52_state_t *codec; a52_free(codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -la52 -lm) : 
+
+/tmp/gpac-conf--21467-.c:4:10: fatal error: a52dec/mm_accel.h: No such file or directory
+    4 | #include <a52dec/mm_accel.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <inttypes.h>
+#define uint32_t unsigned int
+#define uint8_t unsigned char
+#include <a52dec/mm_accel.h>
+#include <a52dec/a52.h>
+int main( void ) { a52_state_t *codec; a52_free(codec); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lxvidcore -lpthread) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: xvid.h: No such file or directory
+    1 | #include <xvid.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <xvid.h>
+#include <stddef.h>
+int main( void ) { void *codec; xvid_decore(codec, XVID_DEC_DESTROY, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lxvidcore -lpthread) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: xvid.h: No such file or directory
+    1 | #include <xvid.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <xvid.h>
+#include <stddef.h>
+int main( void ) { void *codec; xvid_decore(codec, XVID_DEC_DESTROY, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lxvidcore -lpthread) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: xvid.h: No such file or directory
+    1 | #include <xvid.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <xvid.h>
+#include <stddef.h>
+int main( void ) { void *codec; xvid_decore(codec, XVID_DEC_DESTROY, NULL, NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lfaad -lm) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: faad.h: No such file or directory
+    1 | #include <faad.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <faad.h>
+int main( void ) { NeAACDecOpen(); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lfaad -lm) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: faad.h: No such file or directory
+    1 | #include <faad.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <faad.h>
+int main( void ) { NeAACDecOpen(); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lfaad -lm) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: faad.h: No such file or directory
+    1 | #include <faad.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <faad.h>
+int main( void ) { NeAACDecOpen(); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lnghttp2) : 
+
+/tmp/gpac-conf--21467-.c:2:10: fatal error: nghttp2/nghttp2.h: No such file or directory
+    2 | #include <nghttp2/nghttp2.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <stdio.h>
+#include <nghttp2/nghttp2.h>
+int main( void ) {  nghttp2_session *ng_sess; nghttp2_session_del(ng_sess); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lnghttp2) : 
+
+/tmp/gpac-conf--21467-.c:2:10: fatal error: nghttp2/nghttp2.h: No such file or directory
+    2 | #include <nghttp2/nghttp2.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <stdio.h>
+#include <nghttp2/nghttp2.h>
+int main( void ) {  nghttp2_session *ng_sess; nghttp2_session_del(ng_sess); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lnghttp2) : 
+
+/tmp/gpac-conf--21467-.c:2:10: fatal error: nghttp2/nghttp2.h: No such file or directory
+    2 | #include <nghttp2/nghttp2.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <stdio.h>
+#include <nghttp2/nghttp2.h>
+int main( void ) {  nghttp2_session *ng_sess; nghttp2_session_del(ng_sess); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lcaption) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caption/cea708.h: No such file or directory
+    1 | #include <caption/cea708.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caption/cea708.h>
+int main( void ) { caption_frame_t ccframe; caption_frame_init(&ccframe); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lcaption) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caption/cea708.h: No such file or directory
+    1 | #include <caption/cea708.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caption/cea708.h>
+int main( void ) { caption_frame_t ccframe; caption_frame_init(&ccframe); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lcaption) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caption/cea708.h: No such file or directory
+    1 | #include <caption/cea708.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caption/cea708.h>
+int main( void ) { caption_frame_t ccframe; caption_frame_init(&ccframe); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lcaca) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caca.h: No such file or directory
+    1 | #include <caca.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caca.h>
+int main( void ) { caca_canvas_t *canvas = caca_create_canvas(20, 20); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lcaca) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caca.h: No such file or directory
+    1 | #include <caca.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caca.h>
+int main( void ) { caca_canvas_t *canvas = caca_create_canvas(20, 20); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lcaca) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: caca.h: No such file or directory
+    1 | #include <caca.h>
+      |          ^~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <caca.h>
+int main( void ) { caca_canvas_t *canvas = caca_create_canvas(20, 20); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lMpeghDec -lMpegTPDec -lPCMutils -lIGFdec -lArithCoding -lFormatConverter -lgVBAPRenderer -lDRCdec -lUIManager -lSYS -lFDK -lm) : 
+
+/tmp/gpac-conf--21467-.c:5:10: fatal error: mpeghdecoder.h: No such file or directory
+    5 | #include <mpeghdecoder.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+
+#ifndef bool
+typedef int bool;
+#endif
+#include <mpeghdecoder.h>
+int main( void ) { HANDLE_MPEGH_DECODER_CONTEXT codec = mpeghdecoder_init(2); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lMpeghDec -lMpegTPDec -lPCMutils -lIGFdec -lArithCoding -lFormatConverter -lgVBAPRenderer -lDRCdec -lUIManager -lSYS -lFDK -lm) : 
+
+/tmp/gpac-conf--21467-.c:5:10: fatal error: mpeghdecoder.h: No such file or directory
+    5 | #include <mpeghdecoder.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+
+#ifndef bool
+typedef int bool;
+#endif
+#include <mpeghdecoder.h>
+int main( void ) { HANDLE_MPEGH_DECODER_CONTEXT codec = mpeghdecoder_init(2); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lMpeghDec -lMpegTPDec -lPCMutils -lIGFdec -lArithCoding -lFormatConverter -lgVBAPRenderer -lDRCdec -lUIManager -lSYS -lFDK -lm) : 
+
+/tmp/gpac-conf--21467-.c:5:10: fatal error: mpeghdecoder.h: No such file or directory
+    5 | #include <mpeghdecoder.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+
+#ifndef bool
+typedef int bool;
+#endif
+#include <mpeghdecoder.h>
+int main( void ) { HANDLE_MPEGH_DECODER_CONTEXT codec = mpeghdecoder_init(2); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lcurl) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: curl/curl.h: No such file or directory
+    1 | #include <curl/curl.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <curl/curl.h>
+int main( void ) { CURLM *curl_multi = curl_multi_init(); int fn_opt = CURLOPT_PREREQFUNCTION; const struct curl_easyoption *opt = curl_easy_option_next(NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/extra_lib/lib/gcc -lcurl) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: curl/curl.h: No such file or directory
+    1 | #include <curl/curl.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <curl/curl.h>
+int main( void ) { CURLM *curl_multi = curl_multi_init(); int fn_opt = CURLOPT_PREREQFUNCTION; const struct curl_easyoption *opt = curl_easy_option_next(NULL); return 0; }
+
+
+*** CC/CXX Test Failed (res 1 args -I/root/gpac_public/extra_lib/include/ -static -Wl,--warn-common -Wl,-z,defs -L/root/gpac_public/bin/gcc -lcurl) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: curl/curl.h: No such file or directory
+    1 | #include <curl/curl.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <curl/curl.h>
+int main( void ) { CURLM *curl_multi = curl_multi_init(); int fn_opt = CURLOPT_PREREQFUNCTION; const struct curl_easyoption *opt = curl_easy_option_next(NULL); return 0; }
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs -lm) : 
+
+/tmp/gpac-conf--21467-.c: In function ‘main’:
+/tmp/gpac-conf--21467-.c:4:5: warning: unused variable ‘res’ [-Wunused-variable]
+    4 | int res = poll(&fds, 1, 1);
+      |     ^~~
+
+Source was: 
+#include <poll.h>
+int main( void ) {
+struct pollfd fds;
+int res = poll(&fds, 1, 1);
+return 0;
+}
+
+
+*** CC/CXX Test Failed (res 1 args -static -Wl,--warn-common -Wl,-z,defs -lhidapi-hidraw) : 
+
+/tmp/gpac-conf--21467-.c:1:10: fatal error: hidapi/hidapi.h: No such file or directory
+    1 | #include <hidapi/hidapi.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+
+Source was: 
+#include <hidapi/hidapi.h>
+int main( void ) { hid_init(); hid_exit(); return 0; }
+
+
+*** CC/CXX Test Passed (args -static -Wl,--warn-common -Wl,-z,defs) : 
+
+
+Source was: 
+#include <inttypes.h>
+int main(int argc, char ** argv){
+volatile uint32_t i=0x01234567;
+return (*((uint8_t*)(&i))) == 0x67;
+}
+
+
+*** CC/CXX Test Passed (args -O3 -Wall -fno-strict-aliasing -Wno-pointer-sign -fPIC -DPIC -msse2 -Wframe-larger-than=32768 -DNDEBUG -std=gnu99) : 
+
+
+Source was: 
+#include <inttypes.h>
+int main(int argc, char ** argv){
+volatile uint32_t i=0x01234567;
+return (*((uint8_t*)(&i))) == 0x67;
+}
+
+

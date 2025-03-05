@@ -1,0 +1,11 @@
+media_tools/route_dmx.o: media_tools/route_dmx.c \
+ /root/gpac_public/include/gpac/route.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/network.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/xml.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/thread.h

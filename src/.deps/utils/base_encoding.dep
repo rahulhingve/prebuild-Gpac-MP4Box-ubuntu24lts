@@ -1,0 +1,7 @@
+utils/base_encoding.o: utils/base_encoding.c \
+ /root/gpac_public/include/gpac/base_coding.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/constants.h

@@ -1,0 +1,10 @@
+odf/odf_command.o: odf/odf_command.c \
+ /root/gpac_public/include/gpac/internal/odf_dev.h \
+ /root/gpac_public/include/gpac/mpeg4_odf.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/sync_layer.h

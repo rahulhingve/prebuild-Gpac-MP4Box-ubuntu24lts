@@ -1,0 +1,9 @@
+jsmods/storage.o: jsmods/storage.c /root/gpac_public/include/gpac/setup.h \
+ /root/gpac_public/config.h /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ jsmods/../scenegraph/qjs_common.h /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/scenegraph.h \
+ /root/gpac_public/include/gpac/maths.h \
+ jsmods/../scenegraph/../quickjs/quickjs.h

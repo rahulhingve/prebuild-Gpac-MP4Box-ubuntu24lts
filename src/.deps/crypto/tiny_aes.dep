@@ -1,0 +1,2 @@
+crypto/tiny_aes.o: crypto/tiny_aes.c crypto/tiny_aes.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h

@@ -1,0 +1,2 @@
+utils/math.o: utils/math.c /root/gpac_public/include/gpac/maths.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h

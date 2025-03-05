@@ -1,0 +1,15 @@
+evg/raster_yuv.o: evg/raster_yuv.c evg/rast_soft.h \
+ /root/gpac_public/include/gpac/evg.h \
+ /root/gpac_public/include/gpac/path2d.h \
+ /root/gpac_public/include/gpac/maths.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/module.h \
+ /root/gpac_public/include/gpac/config_file.h \
+ /root/gpac_public/include/gpac/main.h \
+ /root/gpac_public/include/gpac/utf.h \
+ /root/gpac_public/include/gpac/color.h \
+ /root/gpac_public/include/gpac/constants.h \
+ /root/gpac_public/include/gpac/thread.h

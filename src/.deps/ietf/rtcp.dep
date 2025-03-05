@@ -1,0 +1,11 @@
+ietf/rtcp.o: ietf/rtcp.c \
+ /root/gpac_public/include/gpac/internal/ietf_dev.h \
+ /root/gpac_public/include/gpac/ietf.h \
+ /root/gpac_public/include/gpac/list.h \
+ /root/gpac_public/include/gpac/tools.h \
+ /root/gpac_public/include/gpac/setup.h /root/gpac_public/config.h \
+ /root/gpac_public/include/gpac/version.h \
+ /root/gpac_public/include/gpac/Remotery.h \
+ /root/gpac_public/include/gpac/bitstream.h \
+ /root/gpac_public/include/gpac/sync_layer.h \
+ /root/gpac_public/include/gpac/network.h
